@@ -6,8 +6,7 @@ import { useContext } from "react";
 import { HouseContext } from "./HouseContext";
 
 const Search = () => {
-  // const { houses } = useContext(HouseContext);
-  // console.log(houses);
+  
   const { handleClick } = useContext(HouseContext);
   return (
     <div
