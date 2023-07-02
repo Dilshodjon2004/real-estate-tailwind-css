@@ -26,7 +26,7 @@ const HouseContextProvider = ({ children }) => {
 
     // set countries state
     setCountries(uniqueCountries);
-  }, []);
+  }, [houses]);
 
   // return all properties
   useEffect(() => {
@@ -39,7 +39,7 @@ const HouseContextProvider = ({ children }) => {
 
     // set properties state
     setProperties(uniqueProperties);
-  }, []);
+  }, [houses]);
 
   const handleClick = () => {
     // set loading
@@ -109,6 +109,7 @@ const HouseContextProvider = ({ children }) => {
           return house.type === property;
         }
       }
+      return false;
     });
 
     setTimeout(() => {
@@ -132,7 +133,6 @@ const HouseContextProvider = ({ children }) => {
         houses,
         loading,
         handleClick,
-        loading,
       }}
     >
       {children}
